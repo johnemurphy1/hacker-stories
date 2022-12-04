@@ -1,3 +1,5 @@
+# This repository is to hold work I do as I go through The Road To React
+I will add files as I go through the chapters and exercises.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
