@@ -27,7 +27,7 @@ const list = [{
 //   title: 'React',
 // }
 
-function App() {
+const App = () => {
   
   return (
     <div>
@@ -44,7 +44,7 @@ function App() {
   );
 }
 
-function Search() {
+const Search = () => {
   return (
     <div>
       <label htmlFor="search">Search: </label>
@@ -54,11 +54,10 @@ function Search() {
 }
 export default App;
 
-function List(){
-  return(
+const List = () => (
+  
     <ul>
-      {list.map(function (item){
-        return (
+      {list.map( (item) =>(
           <li key={item.objectID}>
             <span>
               <a href={item.url}>{item.title}</a>
@@ -68,9 +67,9 @@ function List(){
             <span>{item.points}</span>
 
           </li>
-        );
-      })}
+        
+      ))}
       </ul>
   );
-}
+
 /* <h1>{welcome.greeting} {welcome.title} </h1> */
