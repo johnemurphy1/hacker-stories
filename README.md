@@ -1,6 +1,6 @@
 # This repository is to hold work I do as I go through The Road To React
 I will add files as I go through the chapters and exercises.
-Finished the following sections as of 12/4/22: Hello React, Requirements, Setting up A React Project, Meet the React Component. 12/5/22: React JSX, Lists in React
+Finished the following sections as of 12/4/22: Hello React, Requirements, Setting up A React Project, Meet the React Component. 12/5/22: React JSX, Lists in React, Meet Another React Component
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

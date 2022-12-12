@@ -32,9 +32,8 @@ function App() {
   return (
     <div>
       <h1>My Hacker Stories</h1>
+      <Search />
       
-      <label htmlFor="search">Search:</label>
-      <input id="search" type="text"/>
 
       <hr />
       <List />
@@ -45,6 +44,14 @@ function App() {
   );
 }
 
+function Search() {
+  return (
+    <div>
+      <label htmlFor="search">Search: </label>
+      <input id="search" type="text"/>
+    </div>
+  );
+}
 export default App;
 
 function List(){
