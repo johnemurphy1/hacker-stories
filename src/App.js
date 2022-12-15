@@ -27,9 +27,9 @@ const list = [{
 //   title: 'React',
 // }
 
-const App = () => {
+const App = () => (
   
-  return (
+  (
     <div>
       <h1>My Hacker Stories</h1>
       <Search />
@@ -41,23 +41,25 @@ const App = () => {
       {/* render the list here */}
       {/* and by the way: that's how you do comments in JSX */}
     </div>
+  )
   );
-}
 
-const Search = () => {
-  return (
+
+const Search = () => (
+  (
     <div>
       <label htmlFor="search">Search: </label>
       <input id="search" type="text"/>
     </div>
-  );
-}
+  )
+);
+
 export default App;
 
 const List = () => (
   
     <ul>
-      {list.map( (item) =>(
+      {list.map((item) =>(
           <li key={item.objectID}>
             <span>
               <a href={item.url}>{item.title}</a>
