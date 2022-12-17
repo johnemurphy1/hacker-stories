@@ -1,22 +1,6 @@
 import * as React from 'react';
 
-const list = [{
-  title: 'React',
-  url: 'https://reactjs.org',
-  author: 'Jordan Walke',
-  num_comments: 3,
-  points: 4,
-  objectID: 0,
-},
-{
-  title: 'Redux',
-  url: 'https://redux.js.org',
-  author: 'Dan Abramov, Andrew Clark',
-  num_comments: 2,
-  points: 5,
-  objectID: 1,
-},
-];
+
 
 // function getTitle(title){
 //   return title;
@@ -27,22 +11,40 @@ const list = [{
 //   title: 'React',
 // }
 
-const App = () => (
+const App = () => {
+  const stories = [
+    {
+      title: 'React',
+      url: 'https://reactjs.org',
+      author: 'Jordan Walke',
+      num_comments: 3,
+      points: 4,
+      objectID: 0,
+    },
+    {
+      title: 'Redux',
+      url: 'https://redux.js.org',
+      author: 'Dan Abramov, Andrew Clark',
+      num_comments: 2,
+      points: 5,
+      objectID: 1,
   
-  (
+  },
+  ];  
+  return(
     <div>
       <h1>My Hacker Stories</h1>
       <Search />
       
 
       <hr />
-      <List />
+      <List list={stories} />
       
       {/* render the list here */}
       {/* and by the way: that's how you do comments in JSX */}
     </div>
-  )
   );
+};
 
 
 const Search = () => {
@@ -59,22 +61,27 @@ const Search = () => {
 
 export default App;
 
-const List = () => (
+const List = (props) => (
   
     <ul>
-      {list.map((item) =>(
-          <li key={item.objectID}>
-            <span>
-              <a href={item.url}>{item.title}</a>
-            </span>
-            <span>{item.author}</span>
-            <span>{item.num_comments}</span>
-            <span>{item.points}</span>
-
-          </li>
-        
+      {props.list.map((item) =>(
+          <Item key={item.objectID} item={item}/>
       ))}
       </ul>
   );
+const Item = (props) => (
+  <li>
+        <span>
+          <a href={props.item.url}>{props.item.title}</a>
+        </span>
+            <span>{props.item.author}</span>
+            <span>{props.item.num_comments}</span>
+            <span>{props.item.points}</span>
+
+          </li>
+        
+      );
+      
+
 
 /* <h1>{welcome.greeting} {welcome.title} </h1> */
