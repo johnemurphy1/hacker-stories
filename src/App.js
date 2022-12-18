@@ -31,10 +31,18 @@ const App = () => {
   
   },
   ];  
+  //A
+  const handleSearch = (event) =>{
+    
+    //C
+    console.log(event.target.value);
+  };
   return(
+    console.log('App renders'),
     <div>
       <h1>My Hacker Stories</h1>
-      <Search />
+      {/* // B */}
+      <Search onSearch={handleSearch}/>
       
 
       <hr />
@@ -43,18 +51,31 @@ const App = () => {
       {/* render the list here */}
       {/* and by the way: that's how you do comments in JSX */}
     </div>
+
   );
 };
 
 
 const Search = () => {
+  const [searchTerm, setSearchTerm] = React.useState('');
+  //let searchTerm='';
+  
   const handleChange = (event) =>{
-    console.log(event.target.value);
-  }
+    setSearchTerm(event.target.value);
+    //console.log(event.target.value);
+  //B
+  // eslint-disable-next-line no-undef
+  props.onSearch(event);
+
+  };
   return(
     <div>
       <label htmlFor="search">Search: </label>
       <input id="search" type="text" onChange={handleChange}/>
+    <p>
+      Searching for <strong>{searchTerm}</strong>
+    </p>
+    {/*console.log('Search Renders'),*/}
     </div>
   );
   };
@@ -64,13 +85,17 @@ export default App;
 const List = (props) => (
   
     <ul>
+      
       {props.list.map((item) =>(
           <Item key={item.objectID} item={item}/>
       ))}
+      {/*console.log('List renders'),*/}
       </ul>
+  
   );
 const Item = (props) => (
   <li>
+    {/*console.log('List renders'),*/}
         <span>
           <a href={props.item.url}>{props.item.title}</a>
         </span>
