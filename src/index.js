@@ -9,7 +9,7 @@ root.render(
   
   <React.StrictMode>
     <App />
-    <h1>Hello React World</h1>
+    {/*<h1>Hello React World</h1>*/}
   </React.StrictMode>
 );
 
