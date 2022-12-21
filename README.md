@@ -1,6 +1,6 @@
 # This repository is to hold work I do as I go through The Road To React
 I will add files as I go through the chapters and exercises.
-Finished the following sections as of 12/4/22: Hello React, Requirements, Setting up A React Project, Meet the React Component. 12/5/22: React JSX, Lists in React. 12/11/22: Meet Another React Component and React DOM. 12/12/22 React Component and React Component Definition (Advanced). 12/14/22 Handler Function in JSX. 12/17/22 React Props. 12/18/22 React State & Callback Handlers in JSX. 12/19/22 Lifting State in React and React Controlled Components. 12/20/22 Spread and Rest Operators.
+Finished the following sections as of 12/4/22: Hello React, Requirements, Setting up A React Project, Meet the React Component. 12/5/22: React JSX, Lists in React. 12/11/22: Meet Another React Component and React DOM. 12/12/22 React Component and React Component Definition (Advanced). 12/14/22 Handler Function in JSX. 12/17/22 React Props. 12/18/22 React State & Callback Handlers in JSX. 12/19/22 Lifting State in React and React Controlled Components. 12/20/22 Spread and Rest Operators. 12/21/22 React Side-Effects.
 
 # Getting Started with Create React App
 
