@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .App-logo {
@@ -35,4 +40,28 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body{
+  background-color: khaki;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*text-align: left;*/
+  border: black ridge 1px;
+  border-radius: 10px;
+  /*margin: 3px;
+  width: 20rem;
+  padding-left: 10px;*/
+}
+
+.box {
+  text-align: left;
+  border: black ridge 1px;
+  border-radius: 10px;
+  margin: 3px;
+  width: 20rem;
+  padding-left: 10px;
 }
