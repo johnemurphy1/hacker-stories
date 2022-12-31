@@ -21,20 +21,27 @@ const initialStories = [
 ];
 
 const getAsyncStories = () =>
-  new Promise((resolve,reject) => setTimeout(reject,2000));
+  new Promise((resolve) => 
+    setTimeout(
+      () => resolve({data:{stories: initialStories}}),
+        2000
+        )
+      );
 
 
 const useSemiPersistentState = (key, initialState) => {
-const [value, setValue] = React.useState(
-  localStorage.getItem(key) || initialState
-  );
+  const [value, setValue] = React.useState(
+    localStorage.getItem(key) || initialState
+    );
+      
 React.useEffect(() => {
-  localStorage.setItem(key,value);
-},[value, key]);
-return [value, setValue];
-};
+  localStorage.setItem(key, value);
+    }, [value, key]);
+      
+  return [value, setValue];
+    };
 
-const storiesReducer = (state,action) =>{
+const storiesReducer = (state, action) => {
   switch (action.type) {
     case 'STORIES_FETCH_INIT':
       return {
@@ -46,31 +53,33 @@ const storiesReducer = (state,action) =>{
       return {
         ...state,
         isLoading: false,
-        isError: false, 
+        isError: false,
         data: action.payload,
-      }
+      };
     case 'STORIES_FETCH_FAILURE':
       return {
         ...state,
         isLoading: false,
         isError: true,
-      }    
+      };
     case 'REMOVE_STORY':
       return {
         ...state,
         data: state.data.filter(
-        (story) => action.payload.objectID !== story.objectID
-      ),
-        };
-      default:
-        throw new Error();
-
+          (story) => action.payload.objectID !== story.objectID
+        ),
+      };
+    default:
+      throw new Error();
   }
 };
 
 const App = () => {
 
-  const [searchTerm, setSearchTerm] = useSemiPersistentState('search','React');  
+  const [searchTerm, setSearchTerm] = useSemiPersistentState(
+    'search',
+    'React'
+    );  
 
   const [stories, dispatchStories] = React.useReducer(
     storiesReducer,
