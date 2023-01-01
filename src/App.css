@@ -104,7 +104,9 @@ li{
   /* border-radius: 50%; */
 }
 
-
+p{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 
 /*https://refine.dev/blog/react-search-bar-and-filtering/
 https://blog.logrocket.com/create-search-bar-react-from-scratch/*/
