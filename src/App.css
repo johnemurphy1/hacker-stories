@@ -1,33 +1,33 @@
 * {
-  /* margin: 0;
-  padding: 0; */
+  /*margin: 0;
+  padding: 0;*/ 
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
 
 
 
-.App {
+/*.App {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   
-}
+}*/
 
-.App-logo {
+/*.App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+}*/
 
-@media (prefers-reduced-motion: no-preference) {
+/*@media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+}*/
 
-.headerandsearch {
+/*.headerandsearch {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -36,34 +36,37 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+}*/
 
-.App-link {
+/*.App-link {
   color: #61dafb;
-}
+}*/
 
-@keyframes App-logo-spin {
+/*@keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+}*/
 
 body{
   background-color: khaki;
   text-align: center;
-  display: flex;
-  flex-direction: column;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  
+  position:relative;
+  left: 80px;
   justify-content: center;
   align-items: center;
   /*text-align: left;*/
   border: black ridge 1px;
   border-radius: 10px;
-  /*margin: 3px;
-  width: 20rem;
-  padding-left: 10px;*/
+  margin: 30px;
+  width: 80rem;
+  padding-left: 10px;
   padding: 20px;
   height: 100vh;
   background-color: #fee140;
@@ -81,32 +84,32 @@ body{
 
 li{
   width: 100%;
-  /*margin-bottom: 50px;
-  padding: 20px;
-  border: none;
-  border-radius: 10px;
-  font-size: 10px; */
+  /*margin-bottom: 50px;*/
+  
+  /*border: none;*/
+  /*border-radius: 10px;*/
+  /*font-size: 10px;*/
   display: grid;
   grid-template-columns: 50px auto;
   padding: 20px;
-  margin-bottom: 20px;
-  background-color: white;
-  font-weight: bold;
-  align-items: center;
-  border-radius: 10px;
+  /*margin-bottom: 20px;*/
+  /*background-color: white;*/
+  /*font-weight: bold;*/
+  /*align-items: center;*/
+  /*border-radius: 10px;*/
   display: inline-block;
-  word-spacing: 10px;
-  white-space: nowrap;
-  /*width: 20px;
+  /*word-spacing: 10px;*/
+  /*white-space: nowrap;*/
+  /*width: 20px;*/
   height: 20px;
   border-style: solid;
-  border-width: 5px; */
-  /* border-radius: 50%; */
+  border-width: 5px;
+  /*border-radius: 50%;*/
 }
 
-p{
+/*p{
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
+}*/
 
 /*https://refine.dev/blog/react-search-bar-and-filtering/
 https://blog.logrocket.com/create-search-bar-react-from-scratch/*/
