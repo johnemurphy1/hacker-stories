@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './App.css';
+//import './App.css';
 
 const initialStories = [
   {
@@ -87,15 +87,16 @@ const App = () => {
     storiesReducer,
     {data: [], isLoading: false, isError: false}
   );
-  const [isLoading, setIsLoading] = React.useState(false);
-  const [isError, setIsError] = React.useState(false);
+  // const [isLoading, setIsLoading] = React.useState(false);
+  // const [isError, setIsError] = React.useState(false);
 
   React.useEffect(() => {
     dispatchStories({type: 'STORIES_FETCH_INIT'});
     
     fetch(`${API_ENDPOINT}react`)
       .then((response) => response.json())
-        dispatchStories({
+      .then((result)=> {
+      dispatchStories({
           type: 'STORIES_FETCH_SUCCESS',
           payload: result.hits,
         });
@@ -106,12 +107,10 @@ const App = () => {
   }, []);
 
   const handleRemoveStory = (item) => {
-    const newStories = stories.filter(
-      (story) => item.objectID !== story.objectID
-    );
+    
     dispatchStories({
-      type: 'SET_STORIES',
-      payload: newStories,
+      type: 'REMOVE_STORY',
+      payload: item,
     });
   };
   
@@ -127,7 +126,7 @@ const App = () => {
   );
 
   return (
-    <div>
+    <div class="headerandsearch">
       <h1>My Hacker Stories</h1>
 
       <InputWithLabel
