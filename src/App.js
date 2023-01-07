@@ -83,6 +83,18 @@ const App = () => {
     'React'
     );  
 
+  const [url, setUrl] = React.useState(
+    `${API_ENDPOINT}${searchTerm}`
+  );
+
+  const handleSearchInput = (event) =>{
+    setSearchTerm(event.target.value);
+  };
+
+  const handleSearchSubmit = () => {
+    setUrl(`{API_ENDPOINT}${searchTerm}`);
+  };
+
   const [stories, dispatchStories] = React.useReducer(
     storiesReducer,
     {data: [], isLoading: false, isError: false}
@@ -139,11 +151,17 @@ const App = () => {
       id="search"
       value={searchTerm}
       isFocused
-      onInputChange={handleSearch}
+      onInputChange={handleSearchInput}
       >
 
         <strong>Search:</strong>
       </InputWithLabel>
+      <button 
+        type="button"
+        disabled={!searchTerm}
+        onClick={handleSearchSubmit}>
+          Submit
+        </button>
       <hr />
 
       {stories.isError && <p>Something went wrong...</p>}
