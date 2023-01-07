@@ -208,10 +208,14 @@ const Item = ({ item, onRemoveItem }) => (
     <span>
       <a href={item.url}>{item.title}</a>
     </span>
+    &ensp;
     <span>{item.author}</span>
+    &ensp;
     <span>{item.num_comments}</span>
+    &ensp;
     <span>{item.points}</span>
     <span>
+    &ensp;  
     <button type="button" onClick={() => onRemoveItem(item)}>
         Dismiss
       </button>
